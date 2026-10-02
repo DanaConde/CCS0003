@@ -1,5 +1,5 @@
 /******************************************************************************
-EXERCISE Q03- Ride-Sharing Fare Split  [Medium]
+EXERCISE Q04- Paint Can Estimator [Hard]
 1. Start
 2. Enter wallWidth, walHeight, numCoats, coveragePerCan (sqm)
 3. Compute wallArea = wallWidth * walHeight
