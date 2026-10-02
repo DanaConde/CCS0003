@@ -1,0 +1,46 @@
+/******************************************************************************
+EXERCISE Q03- Ride-Sharing Fare Split  [Medium]
+1. Start
+2. Enter wallWidth, walHeight, numCoats, coveragePerCan (sqm)
+3. Compute wallArea = wallWidth * walHeight
+    Compute totalPaintArea = wallArea * numCoats
+    Compute exactCans = totalPaintArea / coveragePerCan
+    Compute cansToBuy = ceil(exactCans)
+    Display wallArea, exactCans, cansToBuy
+4. End
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double wallWidth, wallHeight, coveragePerCan;
+    int numCoats;
+
+    cout << "Enter width of the wall (m): ";
+    cin >> wallWidth;
+
+    cout << "Enter height of the wall (m): ";
+    cin >> wallHeight;
+    
+    cout << "Enter number of coats: ";
+    cin >> numCoats;
+    
+    cout << "Enter coverage per can (sqm): ";
+    cin >> coveragePerCan;
+    
+    double wallArea = wallWidth * wallHeight;
+    double totalPaintArea = wallArea * numCoats;
+    double exactCans = totalPaintArea / coveragePerCan;
+    int cansToBuy = static_cast<int>(ceil(exactCans));
+
+    cout << fixed << setprecision(2);
+    cout << "\n--- Paint Estimation ---" << endl;
+    cout << "Wall Area: " << wallArea << " sq m" << endl;
+    cout << "Exact Cans Needed: " << exactCans << endl;
+    cout << "Cans to Buy: " << cansToBuy << endl;;
+    
+    return 0;
+}
