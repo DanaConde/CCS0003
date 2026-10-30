@@ -1,0 +1,39 @@
+/******************************************************************************
+M5: Seatwork 1 #1
+Check if number is positive & how many digits number has
+number <= 0 - “It is a non-positive number."
+Max digits of number = 4
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int number;
+
+    cout << "Enter a number with a maximum of 4 digits: ";
+    cin >> number;
+
+    if (number > 0) {
+        if (number <= 9) {
+            cout << "It is a positive number with 1 digit.";
+        }
+        else if (number <= 99) {
+            cout << "It is a positive number with 2 digits.";
+        }
+        else if (number <= 999) {
+            cout << "It is a positive number with 3 digits.";
+        }
+        else if (number <= 9999) {
+            cout << "It is a positive number with 4 digits.";
+        }
+        else {
+            cout << "The number has more than 4 digits.";
+        }
+    }
+    else {
+        cout << "It is a non-positive number.";
+    }
+
+    return 0;
+}
