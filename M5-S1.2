@@ -1,0 +1,54 @@
+/******************************************************************************
+M5: Seatwork 1 #2
+Select arithmetic operator to apply to the two floating numbers
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    float n1, n2, result;
+    char operation;
+
+    cout<<"===Arithmetic With Floating Numbers===\n";
+
+    cout << "Enter the first number: \n";
+    cin >> n1;
+
+    cout << "Enter the second number: \n";
+    cin >> n2;
+
+    cout << "Enter an arithmetic operator (+, -, *, /): \n";
+    cin >> operation;
+
+    switch (operation) {
+        case '+':
+            result = n1 + n2;
+            cout << "Result: " << result;
+            break;
+
+        case '-':
+            result = n1 - n2;
+            cout << "Result: " << result;
+            break;
+
+        case '*':
+            result = n1 * n2;
+            cout << "Result: " << result;
+            break;
+
+        case '/':
+            if (n2 != 0) {
+                result = n1 / n2;
+                cout << "Result: " << result;
+            } else {
+                cout << "Division by zero is not allowed.";
+            }
+            break;
+
+        default:
+            cout << "Invalid arithmetic operator.";
+    }
+
+    return 0;
+}
